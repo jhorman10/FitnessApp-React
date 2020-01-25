@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Exercises from '../pages/Exercises';
-import ExercisesNew from '../pages/ExercisesNew';
+import Exercise from '../pages/Exercise';
+import ExerciseNew from '../pages/ExerciseNew';
 import NotFound from '../pages/NotFound'
 
 const App = () => (
@@ -9,11 +9,11 @@ const App = () => (
         <Switch>
             <Route 
                 exact path = "/" 
-                component = { Exercises }
+                component = { Exercise }
             />
             <Route 
                 exact path = "/new" 
-                component = { ExercisesNew }
+                component = { ExerciseNew }
             />
             <Route 
                 component = { NotFound }

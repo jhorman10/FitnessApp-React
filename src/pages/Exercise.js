@@ -3,7 +3,7 @@ import ExerciseList from '../components/ExerciseList'
 import Welcome from '../components/Welcome';
 import Plus from '../components/Plus'
 
-class Exercises extends Component {
+class Exercise extends Component {
 
     state = {
         data: [
@@ -19,7 +19,7 @@ class Exercises extends Component {
                 "id": 2,
                 "title": "Skills Training",
                 "description": "Learn the secrets of bodyweight techniques",
-                "img": "https://firebasestorage.googleapis.com/v0/b/tutoriales-e4830.appspot.com/o/exercises02.png?alt=media&token=a5d55381-5f3e-4f25-92dd-560775f96aa2",
+                "img": "https://firebasestorage.googleapis.com/v0/b/tutoriales-e4830.appspot.com/o/exercise02.png?alt=media&token=a5d55381-5f3e-4f25-92dd-560775f96aa2",
                 "leftColor": "#17EAD9",
                 "rightColor": "#6078EA"
             },{
@@ -41,7 +41,7 @@ class Exercises extends Component {
                     username="Chris"
                 />
                 <ExerciseList
-                    exercises={this.state.data}
+                    exercise={this.state.data}
                 />
                 <Plus />
             </div>
@@ -50,4 +50,4 @@ class Exercises extends Component {
 
 }
 
-export default Exercises;
+export default Exercise;

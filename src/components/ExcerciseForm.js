@@ -1,22 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-class ExercisesNew extends Component {
-
-    state = {};
+class ExcerciseForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        console.log(this.state);
-    }
-    
-    handleChange = e => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
     }
 
-    render () {
-        return (
+    render() {
+        const { onChange, form } = this.props;
+        return(
             <div className="container">
             <form 
                 onSubmit = {this.handleSubmit}
@@ -27,8 +19,8 @@ class ExercisesNew extends Component {
                         type="text"
                         placeholder="title"
                         name ="title"
-                        onChange={ this.handleChange }
-                        value = { this.state.title }
+                        onChange={ onChange }
+                        value = { form.title }
                     />
                 </div>
                 <div className="form-group">
@@ -37,8 +29,8 @@ class ExercisesNew extends Component {
                         type="text"
                         placeholder="description"
                         name ="description"
-                        onChange={ this.handleChange }
-                        value = { this.state.description }
+                        onChange={ onChange }
+                        value = { form.description }
                     />
                 </div>
                 <div className="form-group">
@@ -47,8 +39,8 @@ class ExercisesNew extends Component {
                         type="text"
                         placeholder="img"
                         name ="img"
-                        onChange={ this.handleChange }
-                        value = { this.state.img }
+                        onChange={ onChange }
+                        value = { form.img }
                     />
                 </div>
                 <div className="form-row">
@@ -58,8 +50,8 @@ class ExercisesNew extends Component {
                             type = "text"
                             placeholder = "leftColor"
                             name ="leftColor"
-                            onChange={ this.handleChange }
-                            value = { this.state.leftColor }
+                            onChange={ onChange }
+                            value = { form.leftColor }
                         />
                     </div>
                     <div className="col-6">
@@ -68,8 +60,8 @@ class ExercisesNew extends Component {
                             type = "text"
                             placeholder = "rightColor"
                             name ="rightColor"
-                            onChange={ this.handleChange }
-                            value = { this.state.rightColor }
+                            onChange={ onChange }
+                            value = { form.rightColor }
                         />
                     </div>
                 </div>
@@ -86,4 +78,4 @@ class ExercisesNew extends Component {
     }
 }
 
-export default ExercisesNew;
+export default ExcerciseForm;

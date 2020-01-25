@@ -1,9 +1,9 @@
 import React from 'react'
 import Card from './Card'
 
-const ExerciseList = ({ exercises }) => (
+const ExerciseList = ({ exercise }) => (
     <div>
-    { exercises.map( ( exercise ) => (
+    { exercise.map( ( exercise ) => (
         <Card
             key = { exercise.id }
             title = { exercise.title }
