@@ -25,17 +25,20 @@ class exerciseNew extends Component {
 
     render () {
         return (
-            <div className="row">
-                <div className="col-sm">
-                    <Card { ...this.state.form }/>
-                </div>
-                <div className="col-sm">
-                    <ExcerciseForm
-                        onChange = { this.handleChange }
-                        form = { this.state.form }
-                    />
-                </div>
+            <div className="container mt-5">
+                <div className="row">
+                    <div className="col-sm">
+                        <Card { ...this.state.form }/>
+                    </div>
+                    <div className="col-sm">
+                        <ExcerciseForm
+                            onChange = { this.handleChange }
+                            form = { this.state.form }
+                        />
+                    </div>
+                </div>  
             </div>
+            
             
         )
     }
