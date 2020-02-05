@@ -1,24 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import circlesImg from '../images/circles.png';
-// import brazo from '../images/brazo.png';
+import emptyImg from '../images/empty.png'
 import '../components/styles/Card.css'
 
-class Card extends Component {
-    render(){
-        const { title, description, img, rightColor, leftColor } = this.props;
-        return (
+const Card = ({ title, description, img, rightColor, leftColor }) => (
+
             <div className="card mx-auto Fitness-Card"
             style = {{
-                backgroundImage: `url(${ circlesImg }), linear-gradient(to right, ${ leftColor }, ${ rightColor })`
+                backgroundImage: `url(${ circlesImg }), linear-gradient(to right, ${ leftColor || '#56CCF2' }, ${ rightColor || '#2F80ED' })`
             }}
             >
                 <div className="card-body">
                     <div className="row center">
                         <div className="col-6">
                             <img 
-                            // this.state.
-                                src = { img } 
+                                src = { img || emptyImg } 
                                 className="float-right"
+                                alt = "exercise"
                             />
                         </div>
                         <div className="col-6 Fitness-Card-Info">
@@ -28,8 +26,7 @@ class Card extends Component {
                     </div>
                 </div>
             </div>
-        )
-    }
-}
+
+)
 
 export default Card;

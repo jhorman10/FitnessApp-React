@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 
 const Plus = () => (
     <Link to="/new">
-        <img className="Fitness-Add" src = { PlusImg }/>
+        <img 
+            className="Fitness-Add" 
+            src = { PlusImg } 
+            alt = ""
+        />
     </Link>
 )
 
